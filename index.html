@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saffron</title>
+<title>For Kumkum</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -20,9 +19,9 @@ html {
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #f5f5f5;
-    font-family: 'Cormorant Garamond', serif;
+    background-color: #FAF3E8;
+    font-family: 'Inter', sans-serif;
+    color: #5a4a3f;
     overflow-x: hidden;
 }
 
@@ -36,189 +35,178 @@ section {
 }
 
 h1, h2 {
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
-    letter-spacing: 1px;
+    color: #7a5c3e;
 }
 
 p {
-    max-width: 700px;
+    max-width: 650px;
     line-height: 1.8;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 
-.gold {
-    color: #E6A100;
+.accent {
+    color: #E8B923;
 }
 
 .btn {
     margin-top: 30px;
-    padding: 12px 28px;
-    border: 1px solid #E6A100;
-    color: #E6A100;
-    background: transparent;
-    cursor: pointer;
+    padding: 12px 30px;
+    border: none;
+    background-color: #E8B923;
+    color: white;
     font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: #E6A100;
-    color: #0f0f0f;
+    background-color: #d6a81f;
 }
 
-.fade-in {
+.fade {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.8s ease;
+    transition: all 1s ease;
 }
 
-.fade-in.show {
+.fade.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Slight variation for sections */
 .alt {
-    background-color: #161616;
+    background-color: #FFF8ED;
 }
 
-/* Hidden dot */
-.secret-dot {
+/* soft floating flowers */
+.flower {
+    position: fixed;
+    font-size: 20px;
+    opacity: 0.15;
+    animation: float 12s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+
+/* hidden note */
+.secret {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 12px;
-    height: 12px;
-    background: #E6A100;
-    border-radius: 50%;
+    font-size: 14px;
     cursor: pointer;
-    opacity: 0.6;
+    color: #c9a227;
 }
 
-.secret-dot:hover {
-    opacity: 1;
-}
-
-.modal {
+.note {
+    display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: none;
+    background: rgba(250,243,232,0.95);
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
 }
 
-.modal-content {
+.note-content {
     max-width: 500px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    color: #7a5c3e;
 }
-
 </style>
 </head>
 
 <body>
 
+<div class="flower" style="left:10%;">🌸</div>
+<div class="flower" style="left:40%; animation-delay:4s;">🌼</div>
+<div class="flower" style="left:70%; animation-delay:8s;">🌸</div>
+
 <!-- HERO -->
 <section>
-    <div class="fade-in">
-        <h1>Not everyone understands the value of <span class="gold">saffron</span>.</h1>
-        <p class="gold" style="margin-top:15px;">But I do.</p>
-        <a href="#rare"><button class="btn">Show me why →</button></a>
+    <div class="fade">
+        <h1>You are my <span class="accent">saffron</span>.</h1>
+        <p style="margin-top:20px;">
+            Rare. Gentle. Soft in ways the world does not always understand.
+        </p>
+        <a href="#why"><button class="btn">Keep reading →</button></a>
     </div>
 </section>
 
-<!-- RARE -->
-<section id="rare" class="alt">
-    <div class="fade-in">
-        <h2 class="gold">Why You Are Rare</h2>
+<!-- WHY -->
+<section id="why" class="alt">
+    <div class="fade">
+        <h2>What makes you special to me</h2>
         <p style="margin-top:30px;">
-            You don’t raise your voice when you're hurt.<br><br>
-            You become softer.<br><br>
-            You think before you speak — because your words matter.<br><br>
-            You love gently. But deeply.
+            The way you speak softly even when you're hurt.<br><br>
+            The way you care deeply without asking for anything back.<br><br>
+            The way your heart stays gentle in a loud world.
         </p>
     </div>
 </section>
 
-<!-- VALUE -->
+<!-- SAFE -->
 <section>
-    <div class="fade-in">
-        <h2 class="gold">Not Everyone Deserves Saffron</h2>
+    <div class="fade">
+        <h2>With me, you are safe.</h2>
         <p style="margin-top:30px;">
-            Some people only see color.<br><br>
-            I see meaning.<br><br>
-            Some people see softness.<br><br>
-            I see strength.<br><br>
-            Some people taste sweetness.<br><br>
-            I understand rarity.
-        </p>
-    </div>
-</section>
-
-<!-- PROTECT -->
-<section class="alt">
-    <div class="fade-in">
-        <h2 class="gold">What I Protect</h2>
-        <p style="margin-top:30px;">
-            Your peace.<br><br>
-            Your gentleness.<br><br>
-            Your trust.<br><br>
-            Your heart.<br><br>
-            <span class="gold">And I will never treat you like something common.</span>
+            Safe to be quiet.<br><br>
+            Safe to overthink.<br><br>
+            Safe to cry.<br><br>
+            Safe to laugh too loudly.<br><br>
+            Safe to just be you.
         </p>
     </div>
 </section>
 
 <!-- FINAL -->
-<section>
-    <div class="fade-in">
-        <h1>You are not for everyone.</h1>
-        <p class="gold" style="margin-top:20px;">And I am grateful you chose me.</p>
+<section class="alt">
+    <div class="fade">
+        <h1>I am grateful you chose me.</h1>
+        <p style="margin-top:25px;">
+            And I will always treat you gently.
+        </p>
         <p style="margin-top:40px;">— Yours.</p>
     </div>
 </section>
 
-<!-- SECRET DOT -->
-<div class="secret-dot" onclick="openModal()"></div>
+<div class="secret" onclick="openNote()">a small note</div>
 
-<!-- MODAL -->
-<div class="modal" id="secretModal" onclick="closeModal()">
-    <div class="modal-content gold">
-        If you're reading this at 2am and missing me,<br><br>
-        I promise I'm missing you too.
+<div class="note" id="note" onclick="closeNote()">
+    <div class="note-content">
+        If you're reading this late at night and missing me,
+        just know I’m holding you in my heart too.
     </div>
 </div>
 
 <script>
-const faders = document.querySelectorAll('.fade-in');
+const faders = document.querySelectorAll('.fade');
 
-const appearOptions = {
-    threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
+        if(entry.isIntersecting){
             entry.target.classList.add('show');
-            observer.unobserve(entry.target);
         }
     });
-}, appearOptions);
+}, { threshold: 0.3 });
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+faders.forEach(fade => {
+    observer.observe(fade);
 });
 
-function openModal() {
-    document.getElementById("secretModal").style.display = "flex";
+function openNote() {
+    document.getElementById("note").style.display = "flex";
 }
 
-function closeModal() {
-    document.getElementById("secretModal").style.display = "none";
+function closeNote() {
+    document.getElementById("note").style.display = "none";
 }
 </script>
 
