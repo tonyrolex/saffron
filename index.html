@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saffron</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #f5f5f5;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+h1, h2 {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+p {
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: 1.3rem;
+}
+
+.gold {
+    color: #E6A100;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border: 1px solid #E6A100;
+    color: #E6A100;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #E6A100;
+    color: #0f0f0f;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slight variation for sections */
+.alt {
+    background-color: #161616;
+}
+
+/* Hidden dot */
+.secret-dot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background: #E6A100;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.secret-dot:hover {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.modal-content {
+    max-width: 500px;
+    font-size: 1.4rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section>
+    <div class="fade-in">
+        <h1>Not everyone understands the value of <span class="gold">saffron</span>.</h1>
+        <p class="gold" style="margin-top:15px;">But I do.</p>
+        <a href="#rare"><button class="btn">Show me why →</button></a>
+    </div>
+</section>
+
+<!-- RARE -->
+<section id="rare" class="alt">
+    <div class="fade-in">
+        <h2 class="gold">Why You Are Rare</h2>
+        <p style="margin-top:30px;">
+            You don’t raise your voice when you're hurt.<br><br>
+            You become softer.<br><br>
+            You think before you speak — because your words matter.<br><br>
+            You love gently. But deeply.
+        </p>
+    </div>
+</section>
+
+<!-- VALUE -->
+<section>
+    <div class="fade-in">
+        <h2 class="gold">Not Everyone Deserves Saffron</h2>
+        <p style="margin-top:30px;">
+            Some people only see color.<br><br>
+            I see meaning.<br><br>
+            Some people see softness.<br><br>
+            I see strength.<br><br>
+            Some people taste sweetness.<br><br>
+            I understand rarity.
+        </p>
+    </div>
+</section>
+
+<!-- PROTECT -->
+<section class="alt">
+    <div class="fade-in">
+        <h2 class="gold">What I Protect</h2>
+        <p style="margin-top:30px;">
+            Your peace.<br><br>
+            Your gentleness.<br><br>
+            Your trust.<br><br>
+            Your heart.<br><br>
+            <span class="gold">And I will never treat you like something common.</span>
+        </p>
+    </div>
+</section>
+
+<!-- FINAL -->
+<section>
+    <div class="fade-in">
+        <h1>You are not for everyone.</h1>
+        <p class="gold" style="margin-top:20px;">And I am grateful you chose me.</p>
+        <p style="margin-top:40px;">— Yours.</p>
+    </div>
+</section>
+
+<!-- SECRET DOT -->
+<div class="secret-dot" onclick="openModal()"></div>
+
+<!-- MODAL -->
+<div class="modal" id="secretModal" onclick="closeModal()">
+    <div class="modal-content gold">
+        If you're reading this at 2am and missing me,<br><br>
+        I promise I'm missing you too.
+    </div>
+</div>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+function openModal() {
+    document.getElementById("secretModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("secretModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
