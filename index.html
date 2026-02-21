@@ -5,23 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Kumkum</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
 body {
-    background-color: #F7F4FA;
+    background: linear-gradient(135deg, #FFE5E0, #FFF4D1);
     font-family: 'Quicksand', sans-serif;
-    color: #4B3F3A;
+    color: #4B3A2E;
     overflow-x: hidden;
 }
 
@@ -31,61 +24,46 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 50px 20px;
 }
 
 h1, h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    color: #6A4E42;
+    font-family: 'Baloo 2', cursive;
+    color: #A0522D;
+    margin-bottom: 20px;
 }
 
 p {
-    max-width: 650px;
+    max-width: 700px;
     line-height: 1.8;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
 }
 
-.accent {
-    color: #D4A017;
-}
+.accent { color: #E8B923; }
 
 .btn {
     margin-top: 30px;
-    padding: 12px 30px;
+    padding: 14px 36px;
     border: none;
-    background-color: #D4A017;
-    color: white;
-    font-size: 1rem;
-    border-radius: 30px;
+    background: #E8B923;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #b88913;
-}
+.btn:hover { transform: translateY(-3px); background: #d6a81f; }
 
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease;
-}
+.fade { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
 
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+.alt { background: rgba(255,255,255,0.5); backdrop-filter: blur(3px); border-radius: 20px; padding: 60px 20px; margin: 30px 0; }
 
-.alt {
-    background-color: #FFFDFC;
-}
-
-/* floating flowers */
 .flower {
     position: fixed;
-    font-size: 20px;
-    opacity: 0.12;
+    font-size: 24px;
+    opacity: 0.15;
     animation: float 12s linear infinite;
 }
 
@@ -94,116 +72,82 @@ p {
     100% { transform: translateY(-10vh); }
 }
 
-/* hidden note */
-.secret {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #c89b15;
-}
+.secret { position: fixed; bottom: 20px; right: 20px; font-size:14px; cursor:pointer; color:#D4A017; }
 
-.note {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(247,244,250,0.95);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-}
-
-.note-content {
-    max-width: 500px;
-    font-size: 1.3rem;
-    color: #6A4E42;
-}
+.note { display:none; position:fixed; inset:0; background: rgba(255, 245, 230, 0.95); display:flex; justify-content:center; align-items:center; text-align:center; padding:40px; border-radius:20px; }
+.note-content { max-width:500px; font-size:1.25rem; color:#A0522D; font-family:'Baloo 2', cursive; }
 </style>
 </head>
 
 <body>
 
+<!-- Floating flowers -->
 <div class="flower" style="left:10%;">🌸</div>
-<div class="flower" style="left:40%; animation-delay:4s;">🌼</div>
-<div class="flower" style="left:70%; animation-delay:8s;">🌸</div>
+<div class="flower" style="left:35%; animation-delay:4s;">🌼</div>
+<div class="flower" style="left:60%; animation-delay:8s;">🌷</div>
+<div class="flower" style="left:80%; animation-delay:2s;">🌺</div>
 
+<!-- HERO -->
 <section>
     <div class="fade">
-        <h1>You are my <span class="accent">saffron</span>.</h1>
-        <p style="margin-top:20px;">
-            Rare. Gentle. Soft in ways the world does not always understand.
-        </p>
+        <h1>You are my <span class="accent">saffron</span> 🌟</h1>
+        <p>Rare. Gentle. Sweet in ways the world doesn’t always notice.</p>
         <a href="#why"><button class="btn">Keep reading →</button></a>
     </div>
 </section>
 
+<!-- WHY -->
 <section id="why" class="alt">
     <div class="fade">
-        <h2>What makes you special to me</h2>
-        <p style="margin-top:30px;">
-            The way you speak softly even when you're hurt.<br><br>
-            The way you care deeply without asking for anything back.<br><br>
-            The way your heart stays gentle in a loud world.
-        </p>
+        <h2>Why You’re Special 💛</h2>
+        <p>The way you smile softly even when tired.<br><br>
+        The way you care without asking for anything back.<br><br>
+        The way your heart is gentle, always safe to be around.</p>
     </div>
 </section>
 
+<!-- SAFE -->
 <section>
     <div class="fade">
-        <h2>With me, you are safe.</h2>
-        <p style="margin-top:30px;">
-            Safe to be quiet.<br><br>
-            Safe to overthink.<br><br>
-            Safe to cry.<br><br>
-            Safe to laugh too loudly.<br><br>
-            Safe to just be you.
-        </p>
+        <h2>With Me, You’re Safe 🌷</h2>
+        <p>Safe to laugh too loudly.<br><br>
+        Safe to cry.<br><br>
+        Safe to dream.<br><br>
+        Safe to just be you, always.</p>
     </div>
 </section>
 
+<!-- FINAL -->
 <section class="alt">
     <div class="fade">
-        <h1>I am grateful you chose me.</h1>
-        <p style="margin-top:25px;">
-            And I will always treat you gently.
-        </p>
-        <p style="margin-top:40px;">— Yours.</p>
+        <h1>I’m grateful you chose me 💛</h1>
+        <p>And I will always treat you gently.</p>
+        <p>— Yours</p>
     </div>
 </section>
 
-<div class="secret" onclick="openNote()">a small note</div>
+<div class="secret" onclick="openNote()">a small note ✨</div>
 
 <div class="note" id="note" onclick="closeNote()">
     <div class="note-content">
-        If you're reading this late at night and missing me,
-        just know I’m holding you in my heart too.
+        If you're reading this late at night and missing me,<br>
+        just know I’m holding you in my heart too. 💖
     </div>
 </div>
 
 <script>
+// fade-in scroll
 const faders = document.querySelectorAll('.fade');
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
+        if(entry.isIntersecting) entry.target.classList.add('show');
     });
-}, { threshold: 0.3 });
+}, { threshold:0.3 });
+faders.forEach(fade => observer.observe(fade));
 
-faders.forEach(fade => {
-    observer.observe(fade);
-});
-
-function openNote() {
-    document.getElementById("note").style.display = "flex";
-}
-
-function closeNote() {
-    document.getElementById("note").style.display = "none";
-}
+// note popup
+function openNote() { document.getElementById("note").style.display="flex"; }
+function closeNote() { document.getElementById("note").style.display="none"; }
 </script>
 
 </body>
